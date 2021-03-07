@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+   <!-- 头部组件 -->
+   <top></top>
+   <!-- 主体组件 -->
+   <index></index>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	// 引入 相当于创建一个变量然后把引入的内容赋给它
+	import top from './components/top.vue'
+	import index from './components/index.vue'
+	export default {
+		components:{
+			top,
+			index
+		}
+	}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style >
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	
 </style>
