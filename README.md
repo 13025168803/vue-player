@@ -3,9 +3,6 @@
 ## 项目介绍
 这是一个仿网易云音乐网页播放器，基于 Vue + Element UI 构建，是一个vue练手项目，因此整体页面样式都比较简洁，只实现了大部分主要功能，后续将继续更新完善。
 
-#### 项目接口
-项目接口是 [网易云音乐 NodeJS 版 API](https://github.com/Binaryify/NeteaseCloudMusicApi) 以及该项目的完整接口[文档](https://binaryify.github.io/NeteaseCloudMusicApi/#/)
-
 #### 实行功能
 1. 获取歌单、MV、歌曲等信息并展示
 2. 播放音乐
@@ -16,29 +13,32 @@
 6. 返回上一步、下一步
 
 #### 部分界面预览
-发现音乐页面
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E5%8F%91%E7%8E%B0%E9%9F%B3%E4%B9%90.png)
 
-推荐音乐页面
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E6%8E%A8%E8%8D%90%E9%9F%B3%E4%B9%90.png)
+[发现音乐页面](https://github.com/13025168803/vue-player/blob/master/docs/%E5%8F%91%E7%8E%B0%E9%9F%B3%E4%B9%90.png)
 
-最新音乐页面
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E6%9C%80%E6%96%B0%E9%9F%B3%E4%B9%90.png)
 
-最新MV页面
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E6%9C%80%E6%96%B0MV.png)
 
-搜索
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E6%90%9C%E7%B4%A2.png)
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E6%90%9C%E7%B4%A2MV.png)
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E6%90%9C%E7%B4%A2%E6%AD%8C%E5%8D%95.png)
+[推荐音乐页面](https://github.com/13025168803/vue-player/blob/master/docs/%E6%8E%A8%E8%8D%90%E9%9F%B3%E4%B9%90.png)
 
-MV详情
-[](https://github.com/13025168803/vue-player/blob/master/docs/MV%E8%AF%A6%E6%83%85.png)
 
-播放音乐
-[](https://github.com/13025168803/vue-player/blob/master/docs/%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90.png)
+[最新音乐页面](https://github.com/13025168803/vue-player/blob/master/docs/%E6%9C%80%E6%96%B0%E9%9F%B3%E4%B9%90.png)
 
+
+[最新MV页面](https://github.com/13025168803/vue-player/blob/master/docs/%E6%9C%80%E6%96%B0MV.png)
+
+
+[搜索](https://github.com/13025168803/vue-player/blob/master/docs/%E6%90%9C%E7%B4%A2.png)
+[搜索歌单](https://github.com/13025168803/vue-player/blob/master/docs/%E6%90%9C%E7%B4%A2MV.png)
+[搜索MV](https://github.com/13025168803/vue-player/blob/master/docs/%E6%90%9C%E7%B4%A2%E6%AD%8C%E5%8D%95.png)
+
+
+[MV详情](https://github.com/13025168803/vue-player/blob/master/docs/MV%E8%AF%A6%E6%83%85.png)
+
+
+[播放音乐](https://github.com/13025168803/vue-player/blob/master/docs/%E6%92%AD%E6%94%BE%E9%9F%B3%E4%B9%90.png)
+
+#### 项目接口
+项目接口是 [网易云音乐 NodeJS 版 API](https://github.com/Binaryify/NeteaseCloudMusicApi) 
 
 ## 下载运行
 
@@ -80,14 +80,18 @@ $ npm install
 ```
 $ npm run serve
 ```
+
 ##技术栈
+
 - Vue Cli(Vue 脚手架工具)
 - Vue 
 - Vuex(页面路由)
 - Element- UI
 - ES6
 - Axios
+
 ##项目目录图
+
 ```
 ├───docs           	
 │       MV详情.png
