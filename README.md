@@ -81,7 +81,8 @@ $ npm install
 $ npm run serve
 ```
 
-##技术栈
+
+## 技术栈
 
 - Vue Cli(Vue 脚手架工具)
 - Vue 
@@ -90,10 +91,12 @@ $ npm run serve
 - ES6
 - Axios
 
-##项目目录图
+
+## 项目目录图
+
 
 ```
-├───docs           	
+├───docs           				//描述截图
 │       MV详情.png
 │       发现音乐.png
 │       推荐音乐.png
@@ -104,32 +107,32 @@ $ npm run serve
 │       最新MV.png
 │       最新音乐.png
 │       
-├───node_modules
+├───node_modules				//vue-cli依赖包
 │                   
-├───public
+├───public		
 │       favicon.ico
 │       index.html
 │       头像.jpg
 │       
 └───src
-    │   App.vue		//根组件
-    │   main.js		//入口主文件
+    │   App.vue					//根组件
+    │   main.js					//入口主文件
     │   
-    ├───assets
+    ├───assets					//存放图片
     │       logo.png
     │       头像.jpg
     │       点赞.png
     │       
-    └───components
-            discovery.vue
-            index.vue
-            mvdetail.vue
-            mvs.vue
-            playlists.vue
-            result.vue
-            resultlist.vue
-            resultmv.vue
-            resultsong.vue
-            songs.vue
-            top.vue
+    └───components				//存放组件
+            discovery.vue		//发现音乐
+            index.vue			//主页
+            mvdetail.vue		//MV详情
+            mvs.vue				//最新MV
+            playlists.vue		//推荐歌单
+            result.vue			//搜索
+            resultlist.vue		//搜索结果歌单
+            resultmv.vue		//搜索结果MV
+            resultsong.vue		//搜索结果歌曲
+            songs.vue			//最新音乐
+            top.vue				//头部组件
 ```
