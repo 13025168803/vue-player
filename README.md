@@ -86,7 +86,7 @@ $ npm run serve
 
 - Vue Cli(Vue 脚手架工具)
 - Vue 
-- Vuex(页面路由)
+- Vue-Router(页面路由)
 - Element- UI
 - ES6
 - Axios
