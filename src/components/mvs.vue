@@ -20,7 +20,7 @@
 		</div>
 		<div class="mmain">
 			<div class="mvsitem" v-for="(item,index) in mvs" :key="index">
-				<img :src="item.cover" />
+				<img v-lazy="item.cover" />
 				<div class="mvplay">
 					<div class="mvicon-play" @click="playvideo(item.id)"></div>
 				</div>

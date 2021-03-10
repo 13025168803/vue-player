@@ -2,7 +2,7 @@
 	<!-- MV -->
 	<div class="remvmain" >
 		<div class="mvsitem" v-for="(item,index) in mvs" :key="index" @click="playvideo(item.id)">
-			<img :src="item.cover" />
+			<img v-lazy="item.cover" />
 			<div class="mvplaycount">
 				<div class="mvcountcontainer">
 					<span>{{item.playCount}}</span><div class="mvvplaycount"></div>

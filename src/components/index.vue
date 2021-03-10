@@ -38,8 +38,8 @@
 
 <script>
 	import aplayer from "vue-aplayer";  
+	// import {Button} from 'element-ui';
 	
-	// import discovery from './03.discovery.vue'
 	export default{
 		data(){
 			return {
@@ -55,7 +55,6 @@
 				        ],
 				// 控制左边导航栏和播放器的显示
 				noshow:false,
-				
 			}
 		},
 		

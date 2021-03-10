@@ -1,13 +1,13 @@
 <template>
 	<div class="playlist">
 		<div class="ptop">
-			<img :src="toplist.coverImgUrl" class="cover"/>
+			<img v-lazy="toplist.coverImgUrl" class="cover"/>
 			<div class="statetop">精品歌单</div>
 			<div class="statemiddle">{{toplist.copywriter}}</div>
 			<div class="statebottom">
 				{{toplist.description}}
 			</div>
-			<img :src="toplist.coverImgUrl" alt="1" class="bg" />
+			<img v-lazy="toplist.coverImgUrl" alt="1" class="bg" />
 			<div class="bg-mask"></div>
 		</div>
 		<div class="pmiddle">
@@ -18,7 +18,7 @@
 		<div class="pmain">
 			<div class="pitem" v-for="(item,index) in list" :key="index">
 				<!-- <span class="pspan">{{item.copywriter}}</span> -->
-				<img :src="item.coverImgUrl" />
+				<img v-lazy="item.coverImgUrl" />
 				<div class="pplaycount">
 					<div class="pcountcontainer">
 						<span>{{item.playCount}}</span><div class="pppplaycount"></div>
@@ -248,7 +248,7 @@
 	 	width: 90%;
 	 	height: 500px;
 	 	margin: 5px auto;
-		margin-left: 140px;
+		margin-left: 100px;
 	 }
 	 .pitem{
 	 	width: 200px;

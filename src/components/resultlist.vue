@@ -5,7 +5,7 @@
 			<tbody>
 				<tr v-for="(item,index) in lists" :class="index%2==0?'dark':'bright'" >
 					
-					<td class="listrepic"><img :src="item.coverImgUrl"></td>
+					<td class="listrepic"><img v-lazy="item.coverImgUrl"></td>
 					<td class="listresongname">{{item.name}}</td>
 					<td class="listrecount" >{{item.trackCount}}首</td>
 					<td class="listrecreator">by {{item.creator.nickname}}</td> 

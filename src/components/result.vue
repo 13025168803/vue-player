@@ -15,37 +15,6 @@
 			<router-view :page="page"></router-view>
 		</div>
 		
-		
-		
-		
-		
-		<!-- 歌单 -->
-		<!-- <div class="listmain" :class="selected=='listshow'?'a':'hide'">
-			<table class="listretable">
-				<tbody>
-					<tr v-for="(item,index) in lists" :class="index%2==0?'dark':'bright'" >
-						
-						<td class="listrepic"><img :src="item.coverImgUrl"></td>
-						<td class="listresongname">{{item.name}}</td>
-						<td class="listrecount" >{{item.trackCount}}首</td>
-						<td class="listrecreator">by {{item.creator.nickname}}</td> 
-					</tr>
-				</tbody>
-			</table>
-		</div> -->
-		<!-- MV -->
-		<!-- <div class="mvmain" :class="selected=='mvshow'?'a':'hide'">
-			<div class="mvsitem" v-for="(item,index) in mvs" :key="index">
-				<img :src="item.cover" />
-				<div class="mvplaycount">
-					<div class="mvcountcontainer">
-						<span>{{item.playCount}}</span><div class="mvvplaycount"></div>
-					</div> 
-				</div>
-				<p class="mvname">{{item.name}}</p>
-				<p class="mvsinger">{{item.artists[0].name}}</p>
-			</div>
-		</div> -->
 		<!-- 分页 -->
 		<div class="resultbottom">
 			<el-pagination

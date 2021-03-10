@@ -13,7 +13,7 @@
 			</div>
 			<div class="mvdetailmessage">
 				<div class="mdmtop">
-					<img src="../assets/头像.jpg" />
+					<img v-lazy="detail.pic" />
 					<div class="mdmtitle">{{detail.creator}}</div>
 				</div>
 				<div class="mdmname">
@@ -29,7 +29,7 @@
 				<div class="mlhotcomments">
 					<div class="mlhctop">精彩评论</div>
 					<div class="mlhcmain" :class="hidehotcomments?'hide':'a'" v-for="item in hotcomments">
-						<img :src="item.user.avatarUrl"/>
+						<img v-lazy="item.user.avatarUrl"/>
 						<div class="mlhmsg"><span class="nickname">{{item.user.nickname}}:</span><span class="content">{{item.content}}</span></div>
 						<div class="star"><img src="../assets/点赞.png">{{item.likedCount}}</div>
 					</div>
@@ -37,7 +37,7 @@
 				<div class="mlnewcomments">
 					<div class="mlctop">最新评论</div>
 					<div class="mlhcmain" :class="hidenewcomments?'hide':'a'" v-for="item in newcomments">
-						<img :src="item.user.avatarUrl"/>
+						<img v-lazy="item.user.avatarUrl"/>
 						<div class="mlhmsg"><span class="nickname">{{item.user.nickname}}:</span><span class="content">{{item.content}}</span></div>
 						<div class="star"><img src="../assets/点赞.png">{{item.likedCount}}</div>
 					</div>
@@ -49,7 +49,7 @@
 			<div class="mrighttop">相关推荐</div>
 			<div class="mdrrecommend">
 				<div class="mdritem" v-for="(item,index) in mvs" :key="index">
-					<img :src="item.cover" @click="playvideo(item.id)"/>
+					<img v-lazy="item.cover" @click="playvideo(item.id)"/>
 					<!-- 播放次数 -->
 					<div class="mdrcount">
 						<div class="mdrcountcontainer">
@@ -208,9 +208,9 @@
 						mvid:this.id
 					}
 				}).then(res=>{
-					// console.log(res);
+					console.log(res);
 					if(res.data.bufferPic!=null){
-						this.detail.pic=res.data.bufferPic;
+						this.detail.pic=res.data.data.cover;
 					}
 					this.detail.creator=this.$parent.artistname(res.data.data.artists);
 					this.detail.name=res.data.data.name;

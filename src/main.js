@@ -7,16 +7,38 @@ Vue.config.productionTip = false
 import VueRouter from 'vue-router'
 // use
 Vue.use(VueRouter)
+
+// 导入懒加载插件
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
+
+// 按需导入 element-ui组件
+import {Carousel,CarouselItem,Button,Message,Pagination,Tabs,TabPane} from 'element-ui';
+Vue.prototype.$message = Message;
+Vue.component('el-button', Button);
+Vue.component('el-carousel',Carousel);
+Vue.component('el-carousel-item',CarouselItem);
+Vue.component('el-pagination',Pagination);
+Vue.component('el-tabs',Tabs);
+Vue.component('el-tab-pane',TabPane);
+
+// 导入vue-video-player
+import VideoPlayer from 'vue-video-player'
+import 'vue-video-player/src/custom-theme.css'
+import 'video.js/dist/video-js.css'
+Vue.use(VideoPlayer)
+
 // 导入 需要通过路由管理的组件
-import discovery from './components/discovery.vue'
-import playlists from './components/playlists.vue'
-import songs from './components/songs.vue'
-import mvs from './components/mvs.vue'
-import result from './components/result.vue'
-import resultsong from './components/resultsong.vue'
-import resultlist from './components/resultlist.vue'
-import resultmv from './components/resultmv.vue'
-import mvdetail from './components/mvdetail.vue'
+const discovery = () => import('./components/discovery.vue')
+const songs = () => import('./components/songs.vue')
+const playlists = () => import('./components/playlists.vue')
+const mvs = () => import('./components/mvs.vue')
+const result = () => import('./components/result.vue')
+const resultsong = () => import('./components/resultsong.vue')
+const resultlist = () => import('./components/resultlist.vue')
+const resultmv = () => import('./components/resultmv.vue')
+const mvdetail = () => import('./components/mvdetail.vue')
+
 // 创建路由
 let router = new VueRouter({
   routes:[
@@ -83,18 +105,7 @@ let router = new VueRouter({
   ]
 })
 
-// 导入 element-ui
-import ElementUI from 'element-ui'
-// 导入 element-ui 的样式
-import 'element-ui/lib/theme-chalk/index.css';
-// use一下
-Vue.use(ElementUI)
 
-// 导入vue-video-player
-import VideoPlayer from 'vue-video-player'
-import 'vue-video-player/src/custom-theme.css'
-import 'video.js/dist/video-js.css'
-Vue.use(VideoPlayer)
 
 new Vue({
   render: h => h(App),

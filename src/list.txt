@@ -1,0 +1,25 @@
+Folder PATH listing for volume 文档
+Volume serial number is 2D97-AD94
+E:.
+│   App.vue
+│   list.txt
+│   main.js
+│   
+├───assets
+│       logo.png
+│       头像.jpg
+│       点赞.png
+│       
+└───components
+        discovery.vue
+        index.vue
+        mvdetail.vue
+        mvs.vue
+        playlists.vue
+        result.vue
+        resultlist.vue
+        resultmv.vue
+        resultsong.vue
+        songs.vue
+        top.vue
+        

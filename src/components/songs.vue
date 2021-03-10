@@ -15,7 +15,7 @@
 					<td class="sblank"></td>
 					<td class="sorder">{{index<9?'0'+(index+1):index+1}}</td>
 					<td class="ssongpic">
-						<img :src="item.album.blurPicUrl" />
+						<img v-lazy="item.album.blurPicUrl" />
 						<div class="splay">
 							<div class="sicon-play" @click="playMusic(item)"></div>
 						</div>

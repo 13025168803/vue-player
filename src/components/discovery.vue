@@ -4,7 +4,7 @@
 		<div id="dtop">
 			<el-carousel :interval="4000" type="card" height=" 200px ">
 			    <el-carousel-item v-for="(item,index) in banners" :key="index">
-					<img :src="item.imageUrl" @click="playbanner(item.targetId)"/>
+					<img v-lazy="item.imageUrl"  :key='item.imageUrl' @click="playbanner(item.targetId)"/>
 			    </el-carousel-item>
 			</el-carousel>
 		</div>
@@ -16,7 +16,7 @@
 			<div class="rmain" >
 				<div class="ritem" v-for="(item,index) in list" :key="index">
 					<span class="rspan">{{item.copywriter}}</span>
-					<img :src="item.picUrl" />
+					<img v-lazy="item.picUrl" />
 					<div class="rplay">
 						<div class="icon-play" @click="playgedan(item.id)" ></div>
 					</div>
@@ -31,7 +31,7 @@
 			</div>
 			<div class="nmain">
 				<div class="nitem" v-for="(item,index) in songs" :key="index">
-					<img :src="item.picUrl" />
+					<img v-lazy="item.picUrl" />
 					<span class="musicname">{{item.name}}</span>
 					<span class="singer">{{item.song.artists[0].name}}</span>
 					<div class="nplay">
@@ -47,13 +47,11 @@
 			</div>
 			<div class="mvmain">
 				<div class="mvitem" v-for="(item,index) in mvs" :key="index">
-					<img :src="item.cover" />
+					<img v-lazy="item.cover" />
 					<div class="mvplay">
 						<div class="mvicon-play" @click="playmv(item.id)"></div>
 					</div>
-					<!-- <div class="mvplaycount">
-						<div class="playcount"></div> {{item.playCount}}
-					</div> -->
+					
 					<div class="mvplaycount">
 						<div class="mvcountcontainer">
 							<span>{{item.playCount}}</span><div class="dmvvplaycount"></div>
@@ -75,9 +73,12 @@
 	axios.defaults.withCredentials = true// 允许跨域设置，不然可能因为拿不到cookie而报错
 	axios.defaults.baseURL = 'http://localhost:3000/'   /*这里的地址就是刚刚启起来的服务器地址  */
 	
+	
+	
 	export default {
 	  name: 'discovery',
 	  props:['music'],
+	  
 	  data() {
 	    return {
 	      // 走马灯
@@ -291,9 +292,10 @@
 		line-height: 40px;
 	}
 	.rmain{
-		width: 80%;
-		height: 500px;
-		margin: 5px auto;
+		width: 90%;
+		height: 500px;margin: 5px auto;
+		margin-left: 120px;
+		
 	}
 	.ritem{
 		width: 200px;
@@ -480,3 +482,7 @@
 		float: right;
 	}
 </style>
+
+
+
+
